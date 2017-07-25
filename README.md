@@ -10,6 +10,22 @@ It's based off of the official Docker image, and therefore is ultimately based o
 
 It's purpose at the moment is to exist as a build image for CircleCI.  It has all of the requirements of a CircleCi custom image and allows one to build / test Node.js images and push them up to either Docker Hub or AWS ECR.
 
-On AWS Codebuild:
+The official docker hub reporsitory here:
+
+[jcolemorrison/dnd-node-awscli](https://hub.docker.com/r/jcolemorrison/dnd-node-awscli/)
+
+Notes:
+
+1) If you want to change the version of Node or Yarn, or anything with APK, you need to make sure it's available for Alpine 3.6
+
+For example, the only APK nodejs available is 6.10.3.  That's why it's the version here.  To change the version of Alpine, point to a different official Docker docker image.  This one is based off of `17.06.0-ce`. And that means it's underlying Alpine is 3.6.
+
+[You can find a list of node verisons here](https://pkgs.alpinelinux.org/packages?name=nodejs&branch=&repo=&arch=&maintainer=)
+
+[And a list of yarn versions here](https://pkgs.alpinelinux.org/packages?name=yarn&branch=&repo=&arch=&maintainer=)
+
+The "branch" is the verison of Alpine.  So this image works off of 3.6
+
+2) On AWS Codebuild:
 
 It may or may not work with AWS Codebuild, I'm still meaning to test that.  But the official AWS Codebuild images are much heavier, based off of Ubuntu 14.04.5, have a ton of extra dependencies and most importantly marked as "optimized for AWS Codebuild."
