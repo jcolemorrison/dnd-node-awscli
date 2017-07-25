@@ -6,7 +6,7 @@ This Docker file builds a docker image has 5 primary things
 4) AWS CLI
 5) Python
 
-It's based off of the official Docker image, and therefore is ultimately based off of the Alpine Linux 3.6 image.
+It's based off of the [official Docker image](https://hub.docker.com/_/docker/), and therefore is ultimately based off of the **Alpine Linux 3.6** image.
 
 It's purpose at the moment is to exist as a build image for CircleCI.  It has all of the requirements of a CircleCi custom image and allows one to build / test Node.js images and push them up to either Docker Hub or AWS ECR.
 
@@ -18,7 +18,7 @@ Notes:
 
 1) If you want to change the version of Node or Yarn, or anything with APK, you need to make sure it's available for Alpine 3.6
 
-For example, the only APK nodejs available is 6.10.3.  That's why it's the version here.  To change the version of Alpine, point to a different official Docker docker image.  This one is based off of `17.06.0-ce`. And that means it's underlying Alpine is 3.6.
+For example, the only APK nodejs available is 6.10.3.  That's why it's the version here.  To change the version of Alpine, point to a different [official Docker docker image](https://hub.docker.com/_/docker/).  This one is based off of `17.06.0-ce`. And that means it's underlying Alpine is 3.6.
 
 [You can find a list of node verisons here](https://pkgs.alpinelinux.org/packages?name=nodejs&branch=&repo=&arch=&maintainer=)
 
