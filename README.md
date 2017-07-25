@@ -30,6 +30,8 @@ The "branch" is the verison of Alpine.  So this image works off of 3.6
 
 It may or may not work with AWS Codebuild, I'm still meaning to test that.  But the official AWS Codebuild images are much heavier, based off of Ubuntu 14.04.5, have a ton of extra dependencies and most importantly marked as "optimized for AWS Codebuild."
 
+3) With CircleCI 2.0, make sure to use the `setup_remote_docker` option in your steps if you intend on using the Docker client.
+
 ---
 
 This is put together for working with the [Practical and Professional Devops with AWS and Docker](https://awsdevops.io/p/practical-and-professional-devops-with-aws-and-docker) series.
