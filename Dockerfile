@@ -12,8 +12,9 @@ RUN wget "s3.amazonaws.com/aws-cli/awscli-bundle.zip" -O "awscli-bundle.zip" && 
 # only versions available for alpine 3.6
 ARG YARN_VERSION=0.23.3-r0
 ARG NODE_VERSION=6.10.3-r1
+ARG NPM_VERSION=6.10.3-r1
 
 ENV PATH /root/.yarn/bin:$PATH
 
-RUN apk add --update nodejs=${NODE_VERSION} yarn=${YARN_VERSION} && \
+RUN apk add --update nodejs=${NODE_VERSION} yarn=${YARN_VERSION} nodejs-npm=${NPM_VERSION} && \
   rm -rf /var/cache/apk/*
