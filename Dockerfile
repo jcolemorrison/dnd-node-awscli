@@ -22,3 +22,5 @@ RUN apk add --update nodejs=${NODE_VERSION} nodejs-npm=${NPM_VERSION} curl && \
 ARG YARN_VERSION=1.2.1
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s -- --version ${YARN_VERSION}
+
+RUN yarn global add eslint@3.19.0 eslint-plugin-jsx-a11y@5.0.1 eslint-plugin-import@2.2.0 eslint-plugin-react@7.0.1 eslint-plugin-flowtype@2.34.0 eslint-config-airbnb@15.0.1 babel-eslint@7.1.1
