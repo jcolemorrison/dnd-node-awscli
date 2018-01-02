@@ -10,7 +10,7 @@ RUN wget "s3.amazonaws.com/aws-cli/awscli-bundle.zip" -O "awscli-bundle.zip" && 
     rm -rf awscli-bundle
 
 # only versions available for alpine 3.6
-ARG NODE_VERSION=8.9.3-r1
+ARG NODE_VERSION=8.9.3-r0
 
 ENV PATH /root/.yarn/bin:$PATH
 
